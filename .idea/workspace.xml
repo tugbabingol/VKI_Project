@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/database/DatabaseInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/database/DatabaseInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/roles/ERoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/roles/ERoles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginVKIServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginVKIServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +41,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2XqkuBwBcZp1yHckY4M0NI63tdl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -62,8 +73,33 @@
     "onboarding.tips.debug.path": "C:/Users/tugba/OneDrive/Desktop/VKI_Project/VKI_Project/VKI_Project/src/main/java/com/tugbabingol/Main.java",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="DatabaseConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tugbabingol.database.DatabaseConnection" />
+      <module name="VKI_Project.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tugbabingol.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DatabaseConnection" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,6 +110,7 @@
       <updated>1699364219728</updated>
       <workItem from="1699364220879" duration="2736000" />
       <workItem from="1699488813537" duration="2412000" />
+      <workItem from="1699496995421" duration="6183000" />
     </task>
     <task id="LOCAL-00001" summary="Final Project">
       <option name="closed" value="true" />
@@ -99,7 +136,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699496715842</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final Project">
+      <option name="closed" value="true" />
+      <created>1699497157183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699497157183</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Final Project">
+      <option name="closed" value="true" />
+      <created>1699497293610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699497293610</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
