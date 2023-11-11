@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/IDaoGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/IDaoGenerics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/RegisterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/RegisterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/VKIDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/VKIDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" afterDir="false" />
-    </list>
+    <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +147,7 @@
       <workItem from="1699496995421" duration="9741000" />
       <workItem from="1699653098544" duration="5006000" />
       <workItem from="1699705285399" duration="4889000" />
-      <workItem from="1699726192037" duration="1441000" />
+      <workItem from="1699726192037" duration="2195000" />
     </task>
     <task id="LOCAL-00001" summary="Final Project">
       <option name="closed" value="true" />
@@ -220,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699669446144</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final Project">
+      <option name="closed" value="true" />
+      <created>1699736300418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699736300418</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
