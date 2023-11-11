@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/IDaoGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/IDaoGenerics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/RegisterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/RegisterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/BaseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/BaseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/RegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/VKIDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dao/VKIDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginVKIServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginVKIServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +52,20 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tugbabingol&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a3139037-f12d-4fbc-8925-0e8f85e15155" />
+        <option name="url" value="https://github.com/tugbabingol/VKI_Project" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,7 +152,9 @@
       <workItem from="1699364220879" duration="2736000" />
       <workItem from="1699488813537" duration="2412000" />
       <workItem from="1699496995421" duration="9741000" />
-      <workItem from="1699653098544" duration="3704000" />
+      <workItem from="1699653098544" duration="5006000" />
+      <workItem from="1699705285399" duration="4889000" />
+      <workItem from="1699726192037" duration="1441000" />
     </task>
     <task id="LOCAL-00001" summary="Final Project">
       <option name="closed" value="true" />
@@ -199,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699567967022</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Final Project">
+      <option name="closed" value="true" />
+      <created>1699669446144</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699669446144</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

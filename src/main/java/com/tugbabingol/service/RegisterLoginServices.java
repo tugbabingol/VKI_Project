@@ -8,7 +8,7 @@ import com.tugbabingol.roles.ERoles;
 import java.util.Scanner;
 
 
-public class RegisterLoginVKIServices {
+public class RegisterLoginServices {
 
     // Injection
     private RegisterController registerController = new RegisterController();

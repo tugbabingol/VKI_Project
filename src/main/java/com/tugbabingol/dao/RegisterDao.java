@@ -224,6 +224,11 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, Serializable {
         return null;
     }
 
+    @Override
+    public RegisterDto findByName(String name) {
+        return null;
+    }
+
     // LIST
     @Override
     public ArrayList<RegisterDto> list() {

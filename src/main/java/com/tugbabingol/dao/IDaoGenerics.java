@@ -21,6 +21,7 @@ public interface IDaoGenerics <T> {
     // FIND BY ID
     public T findById(Long id);
     public T findByEmail(String email);
+    public T findByName(String name);
 
     // LIST
     public ArrayList<T> list();
