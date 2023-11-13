@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project" />
+    <list default="true" id="02ee36cc-0597-412f-9c7d-bd31b718b2ec" name="Changes" comment="Final Project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/controller/VKIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/dto/VKIDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/RegisterLoginServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/VKIServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tugbabingol/service/VKIServices.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,30 +84,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/tugba/OneDrive/Desktop/VKI_Project/VKI_Project/VKI_Project/src/main/java/com/tugbabingol/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/tugba/OneDrive/Desktop/VKI_Project/VKI_Project/VKI_Project/src/main/java/com/tugbabingol/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
+}]]></component>
+  <component name="RunManager" selected="Application.VKIServices">
     <configuration name="DatabaseConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tugbabingol.database.DatabaseConnection" />
       <module name="VKI_Project.main" />
@@ -127,8 +134,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VKIServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tugbabingol.service.VKIServices" />
+      <module name="VKI_Project.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tugbabingol.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VKIServices" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DatabaseConnection" />
       </list>
@@ -147,7 +168,8 @@
       <workItem from="1699496995421" duration="9741000" />
       <workItem from="1699653098544" duration="5006000" />
       <workItem from="1699705285399" duration="4889000" />
-      <workItem from="1699726192037" duration="2195000" />
+      <workItem from="1699726192037" duration="2680000" />
+      <workItem from="1699826619505" duration="16007000" />
     </task>
     <task id="LOCAL-00001" summary="Final Project">
       <option name="closed" value="true" />
@@ -221,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699736300418</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Final Project">
+      <option name="closed" value="true" />
+      <created>1699736335120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699736335120</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

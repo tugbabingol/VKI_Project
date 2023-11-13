@@ -44,6 +44,11 @@ public class RegisterController implements IDaoGenerics<RegisterDto> {
         return registerDao.findByEmail(email);
     }
 
+    @Override
+    public RegisterDto findByName(String name) {
+        return null;
+    }
+
     // LIST
     @Override
     public ArrayList<RegisterDto> list() {

@@ -18,17 +18,17 @@ public class VKIController implements IDaoGenerics<VKIDto> {
 
     @Override
     public String allDelete() {
-        return null;
+        return vkiDao.allDelete();
     }
 
     @Override
     public VKIDto create(VKIDto vkiDto) {
-        return null;
+        return vkiDao.create(vkiDto);
     }
 
     @Override
     public VKIDto findById(Long id) {
-        return null;
+        return vkiDao.findById(id);
     }
 
     @Override
@@ -38,17 +38,17 @@ public class VKIController implements IDaoGenerics<VKIDto> {
 
     @Override
     public VKIDto findByName(String name) {
-        return null;
+        return vkiDao.findByName(name);
     }
 
     @Override
     public ArrayList<VKIDto> list() {
-        return null;
+        return vkiDao.list();
     }
 
     @Override
     public VKIDto update(Long id, VKIDto vkiDto) {
-        return null;
+        return vkiDao.update(id,vkiDto);
     }
 
     @Override
@@ -58,6 +58,6 @@ public class VKIController implements IDaoGenerics<VKIDto> {
 
     @Override
     public VKIDto deleteById(VKIDto vkiDto) {
-        return null;
+        return vkiDao.deleteById(vkiDto);
     }
 }

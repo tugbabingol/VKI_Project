@@ -36,7 +36,7 @@ public class VKIDto extends BaseDto implements Serializable {
     }
 
     public void setuName(String uName) {
-        this.uName = uName;
+        this.uName = uName.trim();
     }
 
     public String getuSurname() {
@@ -44,7 +44,7 @@ public class VKIDto extends BaseDto implements Serializable {
     }
 
     public void setuSurname(String uSurname) {
-        this.uSurname = uSurname;
+        this.uSurname = uSurname.trim();
     }
 
     public Double getuWeight() {

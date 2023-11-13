@@ -136,7 +136,9 @@ public class RegisterLoginServices {
                     break;
                 case 1:
                     System.out.println("Listeleme");
-                    memberList();
+                    //memberList();
+                    VKIServices vkiServices=new VKIServices();
+                    vkiServices.hesapla();
                     break;
                 case 2:
                     if (registerDto.getRolles().equals(ERoles.ADMIN.getValue())) {
