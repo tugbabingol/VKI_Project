@@ -36,10 +36,7 @@ public class VKIController implements IDaoGenerics<VKIDto> {
         return null;
     }
 
-    @Override
-    public VKIDto findByName(String name) {
-        return vkiDao.findByName(name);
-    }
+
 
     @Override
     public ArrayList<VKIDto> list() {

@@ -10,8 +10,6 @@ public class VKIDto extends BaseDto implements Serializable {
 
     public static final Long serialVersionUID=1L;
 
-    private String uName;
-    private String uSurname;
     private Double uWeight;
     private Double uHeight;
     private Double VKI_value;
@@ -23,29 +21,13 @@ public class VKIDto extends BaseDto implements Serializable {
 
     @Override
     public String toString() {
-        return "VKIDto{" + "uName='" + uName+ '\'' +
-                ", uSurname='" + uSurname+ '\'' +
-                ", uWeight='" + uWeight+ '\'' +
-                ", uHeight='" + uHeight+ '\'' +
-                ", VKI_value='" + VKI_value+ '\'' +
-                "} "+ super.toString();
+        return "VKIDto{" +
+                "uWeight=" + uWeight +
+                ", uHeight=" + uHeight +
+                ", VKI_value=" + VKI_value +
+                '}';
     }
 
-    public String getuName() {
-        return uName;
-    }
-
-    public void setuName(String uName) {
-        this.uName = uName.trim();
-    }
-
-    public String getuSurname() {
-        return uSurname;
-    }
-
-    public void setuSurname(String uSurname) {
-        this.uSurname = uSurname.trim();
-    }
 
     public Double getuWeight() {
         return uWeight;

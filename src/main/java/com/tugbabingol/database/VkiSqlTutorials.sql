@@ -20,8 +20,6 @@ CREATE TABLE `vki`.`register` (
     ENGINE = InnoDB;
 CREATE TABLE `vki`.`data`(
                              `vki_id` INT NOT NULL AUTO_INCREMENT ,
-                             `name` VARCHAR(255)  NULL DEFAULT 'adınızı yazmadınız.' ,
-                             `surname` VARCHAR(255) NULL DEFAULT 'soyadınızı yazmadınız.',
                              `weight` FLOAT NULL DEFAULT '0',
                              `height` FLOAT NULL DEFAULT '0',
                              `vki_value` FLOAT NULL DEFAULT '0',

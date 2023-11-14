@@ -1,7 +1,6 @@
 package com.tugbabingol.service;
 
 import com.tugbabingol.controller.VKIController;
-import com.tugbabingol.database.DatabaseConnection;
 import com.tugbabingol.dto.VKIDto;
 
 import java.util.Scanner;
@@ -19,10 +18,6 @@ public class VKIServices {
         System.out.println("\n VKI HESAPLAMA ");
         System.out.println("\n LÜTFEN BİLGİLERİNİZİ GİRİNİZ");
         System.out.println("Kilonuzu giriniz. ");
-        uName = klavye.nextLine();
-        System.out.println("Kilonuzu giriniz. ");
-        uSurname = klavye.nextLine();
-        System.out.println("Kilonuzu giriniz. ");
         uWeight = Double.valueOf(klavye.nextLine());
         System.out.println("Boyunuzu giriniz. ");
         uHeight = Double.valueOf(klavye.nextLine());//- sayı giirilmesine dikkat et
@@ -31,8 +26,6 @@ public class VKIServices {
             hesapla();
         }else {
             vki_result = uWeight/(uHeight*uHeight);
-            vkiDto.setuName(uName);
-            vkiDto.setuSurname(uSurname);
             vkiDto.setuWeight(uWeight);
             vkiDto.setuHeight(uHeight);
             vkiDto.setVKI_value(vki_result);
@@ -45,7 +38,7 @@ public class VKIServices {
     }
 
     //Sonuçlandırma
-    public VKIDto vki_siniflandirma(){
+    protected static VKIDto vki_siniflandirma(){
         VKIDto vkiDto = new VKIDto();
         Double sonuc=vkiDto.getVKI_value();
         if (sonuc<18.5){
@@ -60,7 +53,7 @@ public class VKIServices {
         return null;
     }
 
-
+    /////VKI DENEME
     public static void main(String[] args) {
         VKIServices vkiServices = new VKIServices();
         vkiServices.hesapla();

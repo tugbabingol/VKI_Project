@@ -22,7 +22,7 @@ public class RegisterLoginServices {
         String uName, uSurName,uEmailAddress, uPassword, rolles;
         Long remainingNumber;
         Boolean isPassive;
-        System.out.println("\n###KAYIT OLMA SAYFASINA HOŞGELDİNİZ");
+        System.out.println("\n###KAYIT OLMA SAYFASINA HOSGELDİNİZ");
         System.out.println("Adınızı giriniz");
         uSurName = klavye.nextLine();
         System.out.println("Soyadınızı giriniz");
@@ -96,7 +96,8 @@ public class RegisterLoginServices {
                 System.out.println("Sifreniz veya Emailiniz yanlış girdiniz");
                 // Kalan Hak Database Eksilt
                 registerController.updateRemaing(remaingNumber, registerEmailFind);
-                // File Loglama yapsın
+                //File loglama yapsın
+                filePathData.logFileWriter(uEmailAddress,uPassword);
 
                 // Sisteme giriş hakkım kalmazsa
                 if (remaingNumber == 0) {

@@ -21,7 +21,7 @@ public class FilePathData {
     public FilePathData() {
         this.id = UUID.randomUUID().toString();
         this.systemCreatedDate = new Date(System.currentTimeMillis());
-        pathFileName = "\\log.txt";
+        pathFileName = "\\loglama.txt";
         // C:\io\techcareer\full_3
         pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
         // C:\\io\\techcareer\\full_3\\log.txt
