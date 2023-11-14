@@ -13,12 +13,6 @@ public class RegisterLoginServices {
     // Injection
     private RegisterController registerController = new RegisterController();
 
-    private String[] allRoles() {
-      /*  for ( String temp :ERoles.valueOf() ) {
-        }*/
-        return null;
-    }
-
     // REGISTER
     private RegisterDto register() {
         Scanner klavye = new Scanner(System.in);
@@ -48,13 +42,10 @@ public class RegisterLoginServices {
         registerDto.setRemainingNumber(remainingNumber);
         registerDto.setPassive(isPassive);
         // CREATE
-        try {
-            registerController.create(registerDto);
-            return registerDto;
-        }catch (Exception ex){
+        registerController.create(registerDto);
+        return registerDto;
 
-        }
-        return null;
+
     }
 
     // LOGIN
@@ -71,11 +62,11 @@ public class RegisterLoginServices {
 
         // Email Find
         RegisterDto registerEmailFind = registerController.findByEmail(uEmailAddress);
-        // Kullanıcı yoksa kayıt olsun ve logşn sayfasına ageri donsun.
+        // Kullanıcı yoksa kayıt olsun ve login sayfasına ageri donsun.
         if (registerEmailFind == null) {
             // eğer kullanıcı yoksa kayıt olsun
             register();
-            // Kayot olduktan sonra Login sayfasına geri dön
+            // Kayıt olduktan sonra Login sayfasına geri dön
             login();
         } else {
             // Eğer Kullanıcı Pasifse giris yapmasın
@@ -119,6 +110,7 @@ public class RegisterLoginServices {
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////
+    //ADMIN PROCESS
     private void adminProcess(RegisterDto registerDto) {
         Scanner klavye = new Scanner(System.in);
         while (true) {
@@ -136,7 +128,7 @@ public class RegisterLoginServices {
                     break;
                 case 1:
                     System.out.println("Listeleme");
-                    //memberList();
+                    memberList();
                     VKIServices vkiServices=new VKIServices();
                     vkiServices.hesapla();
                     break;
@@ -225,6 +217,12 @@ public class RegisterLoginServices {
             } //end switch
         } //end while
     } //end method adminProcess
+
+    ///////////////////////
+
+    //////////
+
+
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // METHOD
