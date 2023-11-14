@@ -14,6 +14,7 @@ public class RegisterLoginServices {
     // Injection
     private RegisterController registerController = new RegisterController();
     private FilePathData filePathData = new FilePathData();
+    VKIDto vkiDto = new VKIDto();
 
     // REGISTER
     private RegisterDto register() {
@@ -125,8 +126,8 @@ public class RegisterLoginServices {
             switch (chooise) {
                 case 1:
                     System.out.println("Vucüt Kitle İndeksi Hesaplama");
-                    vkiServices.hesapla();
-                    vkiServices.vki_siniflandirma();
+                    VKIDto vkiResult = vkiServices.hesapla();
+                    vkiServices.vki_siniflandirma(vkiResult);
                     break;
                 case 2:
 
