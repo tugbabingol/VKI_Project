@@ -147,7 +147,9 @@ public class RegisterLoginServices {
     private void adminLogin(){
         Scanner klavye = new Scanner(System.in);
         RegisterDto registerDto = new RegisterDto();
+        RegisterDao registerDao = new RegisterDao();
         String uEmailAddress, uPassword;
+
         Long remaingNumber = 0L;
         System.out.println("\n###ADMİN SAYFASINA HOSGELDINIZ");
         System.out.println("Emailinizi giriniz");
@@ -156,11 +158,12 @@ public class RegisterLoginServices {
         uPassword = klavye.nextLine();
         // Email Find
         RegisterDto registerEmailFind = registerController.findByEmail(uEmailAddress);
-
-        if (registerEmailFind.getRolles().equals(ERoles.ADMIN.getValue())){
+        String firstValue=uPassword;
+        if (uEmailAddress.equals(registerEmailFind.getuEmailAddress()) && registerDao.matchbCryptPassword(firstValue,registerEmailFind.getuPassword()) &&registerEmailFind.getRolles().equals(ERoles.ADMIN.getValue())){
             adminProcess(registerEmailFind);
         }else {
             System.out.println("Rolünüz: " + registerEmailFind.getRolles() + " Yetkiniz yoktur");
+            homePage();
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////
