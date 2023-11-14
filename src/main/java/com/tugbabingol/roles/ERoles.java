@@ -1,7 +1,7 @@
 package com.tugbabingol.roles;
 
 public enum ERoles {
-    ADMIN(1L,"admin"),USER(2L,"user");
+    ADMIN(1L,"admin"),USER(2L,"user"),WRITER(2L,"writer");
     private final Long key;
     private final String value;
 

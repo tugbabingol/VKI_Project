@@ -4,14 +4,16 @@ package com.tugbabingol.service;
 import com.tugbabingol.dao.RegisterDao;
 import com.tugbabingol.controller.RegisterController;
 import com.tugbabingol.dto.RegisterDto;
+import com.tugbabingol.dto.VKIDto;
 import com.tugbabingol.roles.ERoles;
 import java.util.Scanner;
-
+import com.tugbabingol.files.FilePathData;
 
 public class RegisterLoginServices {
 
     // Injection
     private RegisterController registerController = new RegisterController();
+    private FilePathData filePathData = new FilePathData();
 
     // REGISTER
     private RegisterDto register() {
@@ -20,7 +22,7 @@ public class RegisterLoginServices {
         String uName, uSurName,uEmailAddress, uPassword, rolles;
         Long remainingNumber;
         Boolean isPassive;
-        System.out.println("\n###REGISTER SAYSASINA HOSGELDINIZ");
+        System.out.println("\n###KAYIT OLMA SAYFASINA HOŞGELDİNİZ");
         System.out.println("Adınızı giriniz");
         uSurName = klavye.nextLine();
         System.out.println("Soyadınızı giriniz");
@@ -84,7 +86,7 @@ public class RegisterLoginServices {
 
             // Eğer kullanıcı varsa sisteme giriş yapsın    uPassword.equals(registerEmailFind.getuPassword()
             if (uEmailAddress.equals(registerEmailFind.getuEmailAddress()) && registerDao.matchbCryptPassword(firstValue,registerEmailFind.getuPassword()) ) {
-                adminProcess(registerEmailFind);
+               homePage();
             } else {
                 // Kullanıcının kalan hakkı
                 remaingNumber = registerEmailFind.getRemainingNumber();
@@ -109,8 +111,57 @@ public class RegisterLoginServices {
         return registerDto;
     }
 
+    //////////
+    ///ANASAYFA
+    private void homePage(){
+        Scanner klavye = new Scanner(System.in);
+        VKIServices vkiServices = new VKIServices();
+        while (true){
+            System.out.println("\n ANA SAYFAYA HOSGELDINIZ");
+            System.out.println("Lütfen Seçiminizi Yapınız");
+            System.out.println("1-) Vucüt Kitle İndeksi Hesaplama \n2-) Kullanıcı İşlemleri \n 3-) Admin İşlemleri \n");
+            int chooise = klavye.nextInt();
+            switch (chooise) {
+                case 1:
+                    System.out.println("Vucüt Kitle İndeksi Hesaplama");
+                    vkiServices.hesapla();
+                    vkiServices.vki_siniflandirma();
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                   adminLogin();
+                    break;
+                default:
+                    System.out.println("Lütfen belirtilen aralıkta sayı giriniz");
+                    break;
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //admin giriş ekranı
+    private void adminLogin(){
+        Scanner klavye = new Scanner(System.in);
+        RegisterDto registerDto = new RegisterDto();
+        String uEmailAddress, uPassword;
+        Long remaingNumber = 0L;
+        System.out.println("\n###ADMİN SAYFASINA HOSGELDINIZ");
+        System.out.println("Emailinizi giriniz");
+        uEmailAddress = klavye.nextLine();
+        System.out.println("Sifrenizi giriniz");
+        uPassword = klavye.nextLine();
+        // Email Find
+        RegisterDto registerEmailFind = registerController.findByEmail(uEmailAddress);
+
+        if (registerEmailFind.getRolles().equals(ERoles.ADMIN.getValue())){
+            adminProcess(registerEmailFind);
+        }else {
+            System.out.println("Rolünüz: " + registerEmailFind.getRolles() + " Yetkiniz yoktur");
+        }
+    }
     ///////////////////////////////////////////////////////////////////////////////////////
-    //ADMIN PROCESS
     private void adminProcess(RegisterDto registerDto) {
         Scanner klavye = new Scanner(System.in);
         while (true) {
@@ -129,8 +180,6 @@ public class RegisterLoginServices {
                 case 1:
                     System.out.println("Listeleme");
                     memberList();
-                    VKIServices vkiServices=new VKIServices();
-                    vkiServices.hesapla();
                     break;
                 case 2:
                     if (registerDto.getRolles().equals(ERoles.ADMIN.getValue())) {
@@ -143,7 +192,7 @@ public class RegisterLoginServices {
                     }
                     break;
                 case 3:
-                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.USER.getValue())) {
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.WRITER.getValue())) {
                         memberList();
                         System.out.println("ID'e göre Bulma");
                         RegisterDto registerDtoFindId = memberFindById();
@@ -160,7 +209,7 @@ public class RegisterLoginServices {
                     }
                     break;
                 case 4:
-                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.USER.getValue())) {
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.WRITER.getValue())) {
                         memberList();
                         System.out.println("Email'e göre bulma");
                         RegisterDto registerDtoFindEmail = memberfindEmail();
@@ -193,21 +242,47 @@ public class RegisterLoginServices {
                     }
                     break;
                 case 7:
-                  //  logFile();
+                    logFile();
                     break;
                 case 8:
                     System.out.println("Rolünüz: " + userRoles(registerDto.getRolles()));
                     break;
                 case 9:
                     System.out.println("Dosya Ekleme");
-                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.USER.getValue())) {
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.WRITER.getValue())) {
                         specialFileCreateData();
                     } else {
                         System.out.println("Rolünüz: " + registerDto.getRolles() + " Yetkiniz yoktur");
                         //throw new HamitMizrak0Exception("Yetkiniz Yoktur");
                     }
                     break;
-
+                case 10:
+                    System.out.println("Dosya Listeleme");
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.WRITER.getValue())) {
+                        fileListData();
+                    } else {
+                        System.out.println("Rolünüz: " + registerDto.getRolles() + " Yetkiniz yoktur");
+                        //throw new HamitMizrak0Exception("Yetkiniz Yoktur");
+                    }
+                    break;
+                case 11:
+                    System.out.println("Dosya Silme");
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) ) {
+                        fileDeleteData();
+                    } else {
+                        System.out.println("Rolünüz: " + registerDto.getRolles() + " Yetkiniz yoktur");
+                        //throw new HamitMizrak0Exception("Yetkiniz Yoktur");
+                    }
+                    break;
+                case 12:
+                    System.out.println("Dosya Bilgileri");
+                    if (registerDto.getRolles().equals(ERoles.ADMIN.getValue()) || registerDto.getRolles().equals(ERoles.WRITER.getValue())) {
+                        fileInformation();
+                    } else {
+                        System.out.println("Rolünüz: " + registerDto.getRolles() + " Yetkiniz yoktur");
+                        //throw new HamitMizrak0Exception("Yetkiniz Yoktur");
+                    }
+                    break;
                 case 13:
                     logout();
                     break;
@@ -217,12 +292,6 @@ public class RegisterLoginServices {
             } //end switch
         } //end while
     } //end method adminProcess
-
-    ///////////////////////
-
-    //////////
-
-
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // METHOD
@@ -258,7 +327,7 @@ public class RegisterLoginServices {
     private RegisterDto memberUpdate() {
         Scanner klavye = new Scanner(System.in);
         RegisterDto registerDto = new RegisterDto();
-        String uName,uSurName, uEmailAddress, uPassword, rolles;
+        String uName,uSurname, uEmailAddress, uPassword, rolles;
         Long remainingNumber, id;
         Boolean isPassive;
         System.out.println("Güncellemek istediğiniz ID  giriniz");
@@ -269,8 +338,8 @@ public class RegisterLoginServices {
 
         System.out.println("Güncellemek istediğiniz adınızı giriniz");
         uName = klavye.nextLine();
-        System.out.println("Güncellemek istediğiniz soyadınızı giriniz");
-        uSurName = klavye.nextLine();
+        System.out.println("Güncellemek istediğiniz adınızı giriniz");
+        uSurname = klavye.nextLine();
         System.out.println("Güncellemek istediğiniz Emailinizi giriniz");
         uEmailAddress = klavye.nextLine();
         System.out.println("Güncellemek istediğiniz Sifrenizi giriniz");
@@ -284,7 +353,7 @@ public class RegisterLoginServices {
         ////////////////////////////////////////////////////////////////////
         registerDto.setId(id);
         registerDto.setuName(uName);
-        registerDto.setuName(uSurName);
+        registerDto.setuSurName(uName);
         registerDto.setuEmailAddress(uEmailAddress);
         registerDto.setuPassword(uPassword);
         registerDto.setRolles(rolles);
@@ -305,7 +374,9 @@ public class RegisterLoginServices {
     }
 
     // LOGLAMA
-
+    private void logFile() {
+        filePathData.logFileReader();
+    }
 
     // ROLES
     private String userRoles(String roles) {
@@ -331,21 +402,22 @@ public class RegisterLoginServices {
         Scanner klavye = new Scanner(System.in);
         System.out.println("Oluşturmak istediğiniz dosya adını giriniz");
         String fileName = klavye.nextLine();
-        //filePathData.specialFileCreate(fileName);
+        filePathData.specialFileCreate(fileName);
     }
 
     // File List , Information
-    //private void fileListData() {
-      //  filePathData.fileList();
-    //}
+    private void fileListData() {
+        filePathData.fileList();
+    }
 
     // File Delete
-    //private void fileDeleteData() {
-    //    filePathData.fileIsDelete();
-    //}
+    private void fileDeleteData() {
+        filePathData.fileIsDelete();
+    }
 
     // File Information
-    //private void fileInformation() {
-     //   filePathData.fileProperties();
-    //}
+    private void fileInformation() {
+        filePathData.fileProperties();
+    }
 } //end class
+
