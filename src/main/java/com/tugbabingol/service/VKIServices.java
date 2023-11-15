@@ -38,14 +38,19 @@ public class VKIServices {
     protected static void vki_siniflandirma(VKIDto vkiDto) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String sonuc = decimalFormat.format(vkiDto.getVKI_value());
-        if (vkiDto.getVKI_value() < 18.5) {
+        Double vki_degeri=vkiDto.getVKI_value();
+        if (vki_degeri < 18.5) {
             System.out.println(sonuc + " Kilonuz ideal kilonun altındadır.");
-        } else if ((18.5 <= vkiDto.getVKI_value()) && (vkiDto.getVKI_value() <= 24.99)) {
+        } else if ((18.5 <= vki_degeri) && (vki_degeri <= 24.99)) {
             System.out.println(sonuc + " Kilonuz ideal kilodadır.");
-        } else if ((25 <= vkiDto.getVKI_value()) && (vkiDto.getVKI_value() <= 29.99)) {
+        } else if ((25 <= vki_degeri) && (vki_degeri <= 29.99)) {
             System.out.println(sonuc + " Kilonuz ideal kilonun üstündedir.");
-        } else {
-            System.out.println(sonuc + " Kilonuz ideal kilonun üstündedir.");
+        } else if ((30 <= vki_degeri) && (vki_degeri <= 34.99)) {
+            System.out.println(sonuc + " Kilonuz 1. derece obezite düzeyindedir.");
+        }else if ((35 <= vki_degeri) && (vki_degeri <= 39.99)) {
+            System.out.println(sonuc + " Kilonuz 2. derece obezite düzeyindedir.");
+        }else {
+            System.out.println(sonuc + " Kilonuz 3. derece obezite düzeyindedir.");
         }
     }
 
