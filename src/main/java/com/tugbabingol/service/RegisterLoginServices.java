@@ -113,8 +113,8 @@ public class RegisterLoginServices {
         return registerDto;
     }
 
-    //////////
-    ///ANASAYFA
+    ////////////////////////////////////////////////////////
+    ///ANA SAYFA
     private void homePage(){
         Scanner klavye = new Scanner(System.in);
         VKIServices vkiServices = new VKIServices();
@@ -122,6 +122,7 @@ public class RegisterLoginServices {
             System.out.println("\n ANA SAYFAYA HOSGELDINIZ");
             System.out.println("Lütfen Seçiminizi Yapınız");
             System.out.println("1-) Vucüt Kitle İndeksi Hesaplama \n2-) Kullanıcı İşlemleri \n 3-) Admin İşlemleri \n");
+            System.out.println("4-)Çıkış");
             int chooise = klavye.nextInt();
             switch (chooise) {
                 case 1:
@@ -134,6 +135,9 @@ public class RegisterLoginServices {
                     break;
                 case 3:
                    adminLogin();
+                    break;
+                case 4:
+                    logout();
                     break;
                 default:
                     System.out.println("Lütfen belirtilen aralıkta sayı giriniz");
@@ -167,6 +171,7 @@ public class RegisterLoginServices {
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////
+    //Admin Process
     private void adminProcess(RegisterDto registerDto) {
         Scanner klavye = new Scanner(System.in);
         while (true) {
@@ -289,7 +294,7 @@ public class RegisterLoginServices {
                     }
                     break;
                 case 13:
-                    logout();
+                    toHomePage();
                     break;
                 default:
                     System.out.println("Lütfen belirtilen aralıkta sayı giriniz");
@@ -402,6 +407,17 @@ public class RegisterLoginServices {
         }
     } //end logout()
 
+    ///anasayfaya gitmek
+    private void toHomePage(){
+        System.out.println("Anasayfaya dönmek mi istiyorsunuz ? E/H");
+        Scanner klavye = new Scanner(System.in);
+        char result = klavye.nextLine().toLowerCase().charAt(0);
+        if (result == 'e') {
+            homePage();
+        } else {
+            System.out.println("Anasayfaya gidilmedi");
+        }
+    }
     // CREATE FILE
     private void specialFileCreateData() {
         Scanner klavye = new Scanner(System.in);

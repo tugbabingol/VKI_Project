@@ -107,7 +107,8 @@ public class VKIDao implements IDaoGenerics<VKIDto>, Serializable {
     }
 
 
-
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //
     @Override
     public ArrayList<VKIDto> list() {
         ArrayList<VKIDto> list = new ArrayList<>();
@@ -120,7 +121,7 @@ public class VKIDao implements IDaoGenerics<VKIDto>, Serializable {
             // Sorgularda  : executeQuery [list, find]
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                // nick_name, email_address, password, roles, remaining_number, is_passive
+                // vki_id,weight,height,vki_value
                 vkiDto =new VKIDto();
                 vkiDto.setId(resultSet.getLong("vki_id"));
                 vkiDto.setuWeight(resultSet.getDouble("weight"));
@@ -138,7 +139,8 @@ public class VKIDao implements IDaoGenerics<VKIDto>, Serializable {
         }
         return null;
     }
-
+    //////////////////////////////////////////////////////////////////
+    //UPDATE
     @Override
     public VKIDto update(Long id, VKIDto vkiDto) {
         // Bu ID ile ilgili kullanıcı varmı ?
