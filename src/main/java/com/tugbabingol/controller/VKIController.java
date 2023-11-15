@@ -57,4 +57,4 @@ public class VKIController implements IDaoGenerics<VKIDto> {
     public VKIDto deleteById(VKIDto vkiDto) {
         return vkiDao.deleteById(vkiDto);
     }
-}
+}//end class VKIController

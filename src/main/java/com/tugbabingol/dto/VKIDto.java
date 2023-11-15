@@ -1,6 +1,7 @@
 package com.tugbabingol.dto;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class VKIDto extends BaseDto implements Serializable {
     @Override
@@ -17,6 +18,13 @@ public class VKIDto extends BaseDto implements Serializable {
     //parametresiz constructor
     public VKIDto(){
 
+    }
+    //parametreli constructor
+    public VKIDto(Long id, Date systemCreatedDate, Double uWeight, Double uHeight, Double VKI_value) {
+        super(id, systemCreatedDate);
+        this.uWeight = uWeight;
+        this.uHeight = uHeight;
+        this.VKI_value = VKI_value;
     }
 
     @Override
@@ -52,4 +60,5 @@ public class VKIDto extends BaseDto implements Serializable {
     public void setVKI_value(Double VKI_value) {
         this.VKI_value = VKI_value;
     }
-}
+}//end class VKIDto
+

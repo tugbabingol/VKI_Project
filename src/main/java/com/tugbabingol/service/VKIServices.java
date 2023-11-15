@@ -34,7 +34,7 @@ public class VKIServices {
         return vkiDto;
     }
 
-    // Sonuçlandırma
+    // VKI SONUCLANDIRMA
     protected static void vki_siniflandirma(VKIDto vkiDto) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String sonuc = decimalFormat.format(vkiDto.getVKI_value());

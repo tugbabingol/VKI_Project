@@ -46,6 +46,7 @@ public class RegisterLoginServices {
         registerDto.setPassive(isPassive);
         // CREATE
         registerController.create(registerDto);
+        filePathData.logFileWriter(uEmailAddress,uPassword);
         return registerDto;
 
 
@@ -98,6 +99,7 @@ public class RegisterLoginServices {
                 // Kalan Hak Database Eksilt
                 registerController.updateRemaing(remaingNumber, registerEmailFind);
                 //File loglama yapsın
+
                 filePathData.logFileWriter(uEmailAddress,uPassword);
 
                 // Sisteme giriş hakkım kalmazsa
@@ -121,8 +123,8 @@ public class RegisterLoginServices {
         while (true){
             System.out.println("\n ANA SAYFAYA HOSGELDINIZ");
             System.out.println("Lütfen Seçiminizi Yapınız");
-            System.out.println("1-) Vucüt Kitle İndeksi Hesaplama \n2-) Kullanıcı İşlemleri \n 3-) Admin İşlemleri \n");
-            System.out.println("4-)Çıkış");
+            System.out.println("1-) Vucüt Kitle İndeksi Hesaplama \n2-) Admin İşlemleri \n");
+            System.out.println("3-)Çıkış");
             int chooise = klavye.nextInt();
             switch (chooise) {
                 case 1:
@@ -131,19 +133,16 @@ public class RegisterLoginServices {
                     vkiServices.vki_siniflandirma(vkiResult);
                     break;
                 case 2:
-
-                    break;
-                case 3:
                    adminLogin();
                     break;
-                case 4:
+                case 3:
                     logout();
                     break;
                 default:
                     System.out.println("Lütfen belirtilen aralıkta sayı giriniz");
                     break;
-            }
-        }
+            }//end switch
+        }//end while
     }
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -163,9 +162,10 @@ public class RegisterLoginServices {
         // Email Find
         RegisterDto registerEmailFind = registerController.findByEmail(uEmailAddress);
         String firstValue=uPassword;
+        //admin ise giriş yapsın
         if (uEmailAddress.equals(registerEmailFind.getuEmailAddress()) && registerDao.matchbCryptPassword(firstValue,registerEmailFind.getuPassword()) &&registerEmailFind.getRolles().equals(ERoles.ADMIN.getValue())){
             adminProcess(registerEmailFind);
-        }else {
+        }else {//değilse yetkisi olmadığını söyleyip anasayfaya yönlendirsin
             System.out.println("Rolünüz: " + registerEmailFind.getRolles() + " Yetkiniz yoktur");
             homePage();
         }
@@ -180,12 +180,12 @@ public class RegisterLoginServices {
             System.out.println("0-) Ana sayfa\n1-) Üye Listele\n2-) Üye Ekle\n3-) Üye Bul(ID)\n4-) Üye Bul (Email)");
             System.out.println("5-) Üye Güncelle\n6-) Üye Sil\n7-) Giriş Logları\n8-) Rolünüz");
             System.out.println("9-) Dosya Ekle\n10-) Dosya Listele\n11-) Dosya Sil");
-            System.out.println("12-) Dosya Bilgileri\n13-) Çıkış Yap");
+            System.out.println("12-) Dosya Bilgileri\n");
             int chooise = klavye.nextInt();
             switch (chooise) {
                 case 0:
                     System.out.println("Home Page");
-                    specialHomePage();
+                    homePage();
                     break;
                 case 1:
                     System.out.println("Listeleme");
@@ -293,9 +293,7 @@ public class RegisterLoginServices {
                         //throw new HamitMizrak0Exception("Yetkiniz Yoktur");
                     }
                     break;
-                case 13:
-                    toHomePage();
-                    break;
+
                 default:
                     System.out.println("Lütfen belirtilen aralıkta sayı giriniz");
                     break;
