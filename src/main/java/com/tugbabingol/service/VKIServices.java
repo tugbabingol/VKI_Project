@@ -35,7 +35,7 @@ public class VKIServices {
     }
 
     // VKI SONUCLANDIRMA
-    protected static void vki_siniflandirma(VKIDto vkiDto) {
+    public static void vki_siniflandirma(VKIDto vkiDto) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String sonuc = decimalFormat.format(vkiDto.getVKI_value());
         Double vki_degeri=vkiDto.getVKI_value();

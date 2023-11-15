@@ -212,8 +212,6 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, Serializable {
                 registerDto.setRolles(resultSet.getString("roles"));
                 registerDto.setRemainingNumber(resultSet.getLong("remaining_number"));
                 registerDto.setPassive(resultSet.getBoolean("is_passive"));
-                //registerDto.setSystemCreatedDate(resultSet.getDate("systemCreatedDate"));
-                //registerDto.setSystemCreatedDate(resultSet.getDate("system_created_date"));
             }
             return registerDto; // eğer başarılı ise return registerDto
         } catch (SQLException sql) {
@@ -236,7 +234,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, Serializable {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             // executeUpdate() [create, delete, update]
             // Sorgularda  : executeQuery [list, find]
-            ResultSet resultSet = preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.  executeQuery();
             while (resultSet.next()) {
                 // name, email_address, password, roles, remaining_number, is_passive
                 registerDto = new RegisterDto();

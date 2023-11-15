@@ -1,5 +1,5 @@
 # Full Stack Developer Bitirme Projesi
-## Vücüt Kitle İndeksi Hesaplama Uygulaması
+## Vücut Kitle İndeksi Hesaplama Uygulaması
 
 Vücut kitle indeksi (VKİ), vücut ağırlığının (kg), boy uzunluğunun metre cinsinden karesine bölünmesiyle hesaplanır. Bu proje, kullanıcıdan almış olduğu gerekli bilgiler ile vücut kitle indeksinin hesaplanmasını sağlar. Ayrıca alınan bilgileri veritabanında saklamaktadır.
 
